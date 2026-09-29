@@ -29,10 +29,20 @@ public class DriversLicenseExam {
             if (anskey[i].equalsIgnoreCase(answers[i])){
                 grade++;
             }
-        
-                    
-        System.out.println("Your grade is a " + grade/0.2 + "%");
-        str_scan.close();
+            else{
+                System.out.println("Answer " + (i+1) + " is wrong.");
+            }
+            
         }
+                    
+        System.out.println("Correct answers: " + grade + "\n" +
+                           "Incorrect answers: " + (20-grade));
+        if (grade >= 15)
+            System.out.println("Result: Pass");
+        else
+            System.out.println("Result: Fail");
+
+        str_scan.close();
+        
     }
 }
