@@ -34,5 +34,7 @@ public class Lottery {
             System.out.println("You didnt win the lottery.");
         else
             System.out.print("You won the lottery!");
+        
+        int_scan.close();
     }
 }
